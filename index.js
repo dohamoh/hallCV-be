@@ -16,11 +16,11 @@ import { globalError } from './src/services/asyncHandler.js'
 //     credentials: true
 // }));
 // app.use(cors("*"))
-import cors from 'cors';
-var corsOption = {
-    origin: "*",
-    optionsSuccessStatus: 200
-}
+// import cors from 'cors';
+// var corsOption = {
+//     origin: "*",
+//     optionsSuccessStatus: 200
+// }
 app.use(cors("*"))
 const port = process.env.PORT
 app.use(express.json())
