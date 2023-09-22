@@ -9,19 +9,19 @@ const app = express()
 import connection from './DB/connection.js'
 import { globalError } from './src/services/asyncHandler.js'
 
-// app.use(cors({
-//     origin: '*',
-//     allowedHeaders: ['Content-Type', 'mode', 'Authorization', 'X-Requested-With'],
-//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-//     credentials: true
-// }));
-// app.use(cors("*"))
-import cors from 'cors';
-var corsOption = {
-    origin: "*",
-    optionsSuccessStatus: 200
-}
+app.use(cors({
+    origin: '*',
+    allowedHeaders: ['Content-Type', 'mode', 'Authorization', 'X-Requested-With'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    credentials: true
+}));
 app.use(cors("*"))
+// import cors from 'cors';
+// var corsOption = {
+//     origin: "*",
+//     optionsSuccessStatus: 200
+// }
+// app.use(cors("*"))
 const port = process.env.PORT
 app.use(express.json())
 
