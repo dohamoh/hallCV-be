@@ -23,12 +23,12 @@ const userSchema = new Schema({
     role: {
       type: String,
       required: true,
-      default:'User',
+      default:'Admin',
       enum: ['User','Admin']
   },
     confirmEmail: {
         type: Boolean,
-        default: 'false',
+        default: 'true',
     },
     reservations: [{
       type: Types.ObjectId,
