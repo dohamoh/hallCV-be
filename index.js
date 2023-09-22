@@ -8,6 +8,7 @@ import * as indexRouter from './src/module/index.router.js'
 const app = express()
 import connection from './DB/connection.js'
 import { globalError } from './src/services/asyncHandler.js'
+import cors from 'cors';
 
 app.use(cors({
     origin: '*',
@@ -15,8 +16,6 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true
 }));
-app.use(cors("*"))
-// import cors from 'cors';
 // var corsOption = {
 //     origin: "*",
 //     optionsSuccessStatus: 200
